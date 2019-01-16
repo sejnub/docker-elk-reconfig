@@ -29,7 +29,7 @@ do
     : #echo "  $inputfile belongs to git. So it was not processed."
   else
     echo "  '$inputfile' is copied to '$OUTPUT_FOLDER' ..."
-    #cp $inputfile $OUTPUT_FOLDER/
+    cp $inputfile $OUTPUT_FOLDER/$inputfile
   fi      
 done
 
