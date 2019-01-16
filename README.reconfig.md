@@ -22,7 +22,7 @@ cd ~
 rm -rf ~/docker-elk
 git clone https://github.com/sejnub/docker-elk.git
 
-# Checkout decker-elk-reconfig
+# Checkout docker-elk-reconfig
 
 cd ~
 cd ~/docker-elk-reconfig
@@ -32,13 +32,13 @@ cd ~
 rm -rf ~/docker-elk-reconfig
 git clone https://github.com/sejnub/docker-elk-reconfig.git
 
-# Apply decker-elk-reconfig
+# Apply docker-elk-reconfig
 
 cd ~
 cd ~/docker-elk-reconfig
 apply-reconfig.sh
 
-# Start everything
+# Start docker-elk
 
 cd ~/docker-elk
 docker-compose up -d
