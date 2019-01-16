@@ -12,34 +12,19 @@ This repository contains
 
 ```sh
 
-# Stop everything
 
-cd ~
-cd ~/docker-elk
-docker-compose down
-
-# Checkout docker-elk
-
-cd ~
-rm -rf ~/docker-elk
-git clone https://github.com/sejnub/docker-elk.git
-
-# Checkout docker-elk-reconfig
+# Checkout docker-elk-reconfig and cache git login
 
 cd ~
 rm -rf ~/docker-elk-reconfig
 git clone https://github.com/sejnub/docker-elk-reconfig.git
 
-# Apply docker-elk-reconfig
+# Do everything
 
 cd ~
 cd ~/docker-elk-reconfig
-./apply.reconfig.sh
+./start.reconfig.sh
 
-# Start docker-elk
-
-cd ~/docker-elk
-docker-compose up -d
 
 ```
 
