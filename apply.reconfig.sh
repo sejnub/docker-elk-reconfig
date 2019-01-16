@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILES_TO_BE_PROCESSED="./*"
-$OUTPUT_FOLDER=../docker-elk
+OUTPUT_FOLDER=../docker-elk
 
 
 
