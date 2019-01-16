@@ -1,8 +1,18 @@
-# Elastic stack (ELK) on Docker
+# Elastic stack configuration (ELK) on Docker
 
-## HB
+## What is this
+
+This repository contains
+
+- one or more specific configurations for the elk stack at <https://github.com/deviantony/docker-elk>
+
+- the tools to add this configuration to a working copy of <https://github.com/deviantony/docker-elk>
+
+## Run it
 
 ```sh
+
+# Checkout docker-elk
 
 cd ~
 cd ~/docker-elk
@@ -11,6 +21,24 @@ docker-compose down
 cd ~
 rm -rf ~/docker-elk
 git clone https://github.com/sejnub/docker-elk.git
+
+# Checkout decker-elk-reconfig
+
+cd ~
+cd ~/docker-elk-reconfig
+docker-compose down
+
+cd ~
+rm -rf ~/docker-elk-reconfig
+git clone https://github.com/sejnub/docker-elk-reconfig.git
+
+# Apply decker-elk-reconfig
+
+cd ~
+cd ~/docker-elk-reconfig
+apply-reconfig.sh
+
+# Start everything
 
 cd ~/docker-elk
 docker-compose up -d
