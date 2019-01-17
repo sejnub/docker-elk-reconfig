@@ -6,5 +6,6 @@ services:
     image: portainer/portainer
     ports:
       - 9000:9000
+    command: --no-auth
     networks:
       - elk
