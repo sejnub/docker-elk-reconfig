@@ -16,9 +16,10 @@ echo
 
 for inputfile in $FILES_TO_BE_PROCESSED
 do
-  echo "Potentially copying: '$inputfile' ..."
-
-
+  #echo "Potentially copying: '$inputfile' ..."
+  
+  outputfile=$OUTPUT_FOLDER/${inputfile#.././}
+  #echo "outputfile = '$outputfile'"
 
   # take action on each file. $inputfile stores current file name
   if ! [ -f "$inputfile" ]; then
@@ -28,8 +29,8 @@ do
   elif [[ $inputfile =~ \.git ]]; then
     : #echo "  $inputfile belongs to git. So it was not processed."
   else
-    echo "  '$inputfile' is copied to '$OUTPUT_FOLDER' ..."
-    #cp $inputfile $OUTPUT_FOLDER/$inputfile
+    echo "  copying '$inputfile' to '$outputfile' ..."
+    cp $inputfile $outputfile
   fi      
 done
 
