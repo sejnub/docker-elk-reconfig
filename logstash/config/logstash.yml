@@ -1,16 +1,13 @@
 ---
-## Default Kibana configuration from kibana-docker.
-## from https://github.com/elastic/kibana-docker/blob/master/build/kibana/config/kibana.yml
+## Default Logstash configuration from logstash-docker.
+## from https://github.com/elastic/logstash-docker/blob/master/build/logstash/config/logstash-oss.yml
 #
-server.name: kibana
-server.host: "0"
-elasticsearch.url: http://elasticsearch:9200
+http.host: "0.0.0.0"
+path.config: /usr/share/logstash/pipeline
 
 ##########################################
 ## End of original file from docker-elk ##
 ##########################################
-
-path.config: /usr/share/logstash/pipeline
 
 # With the next line reloading works. It is not necessary to add something like "environment: LS_OPTS: -r" to the compose file.
 config.reload.automatic: true
