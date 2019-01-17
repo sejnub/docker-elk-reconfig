@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "#### apply.sh has started."
+
 FILES_TO_BE_PROCESSED=$(find ../.)
 OUTPUT_FOLDER=../../docker-elk
 
@@ -11,8 +13,6 @@ if ! [ -f $OUTPUT_FOLDER/README.md ]; then
 else
   echo "INFO: The folder "docker-elk" is where I expected it. So let's go!"
 fi
-
-echo
 
 for inputfile in $FILES_TO_BE_PROCESSED
 do
@@ -35,20 +35,5 @@ do
 done
 
 
-
-
-
-
-
-
-
-# This script applies the configuration to the checked out docker-elk repository.
-
-# eof
-
-
-
-
-
-
+echo "#### apply.sh has ended."
 

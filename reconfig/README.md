@@ -12,6 +12,7 @@ This repository contains
 
 ```sh
 
+clear
 
 # Checkout docker-elk-reconfig and cache git login
 

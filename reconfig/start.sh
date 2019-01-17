@@ -4,6 +4,8 @@
 
 # Stop everything
 
+echo "#### start.sh has started."
+
 cd ~
 cd ~/docker-elk
 docker-compose down
@@ -24,3 +26,5 @@ cd ~/docker-elk-reconfig/reconfig
 
 cd ~/docker-elk
 docker-compose up -d
+
+echo "#### start.sh has ended."
