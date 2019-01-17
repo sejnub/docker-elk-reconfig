@@ -1,11 +1,8 @@
 #!/bin/bash
 
 OUTPUT_FOLDER=../../docker-elk
-
-#FILES_AND_FOLDERS_TO_BE_DELETED="docker-stack.yml .travis.yml LICENSE extensions/apm-server .git .github .gitattributes"
-FILES_AND_FOLDERS_TO_BE_DELETED=""
-#FILES_TO_BE_COPIED=$(find ../.)
-FILES_TO_BE_COPIED=""
+FILES_AND_FOLDERS_TO_BE_DELETED="docker-stack.yml .travis.yml LICENSE extensions/apm-server .git .github .gitattributes"
+FILES_TO_BE_COPIED=$(find ../.)
 
 
 echo "#### apply.sh has started."
