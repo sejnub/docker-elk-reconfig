@@ -7,6 +7,6 @@ services:
     ports:
       - 9001:9000
     volumes:
-      - ./config/application.conf:/opt/cerebro/conf/application.conf:ro
+      - ./extensions/cerebro/config/application.conf:/opt/cerebro/conf/application.conf:ro
     depends_on:
       - elasticsearch
