@@ -16,6 +16,8 @@ docker-compose down --remove-orphans
 cd ~
 rm -rf ~/docker-elk
 git clone https://github.com/sejnub/docker-elk.git
+cd ~/docker-elk
+checkout x-pack
 
 # Apply docker-elk-reconfig
 
