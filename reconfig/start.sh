@@ -37,6 +37,7 @@ docker-compose \
   -f extensions/curator/curator-compose.yml \
   -f extensions/logspout/logspout-compose.yml \
   -f extensions/cerebro/cerebro-compose.yml \
+  -f extensions/portainer/portainer-compose.yml \
   up -d
 
 echo "#### start.sh has ended."
