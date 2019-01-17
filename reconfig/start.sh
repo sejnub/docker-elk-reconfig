@@ -23,7 +23,7 @@ git checkout x-pack
 
 cd ~
 cd ~/docker-elk-reconfig/reconfig
-#./apply.sh
+./apply.sh
 
 # Start docker-elk
 
