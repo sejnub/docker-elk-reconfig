@@ -44,6 +44,7 @@ do
     : #echo "  $inputfile belongs to git. So it was not processed."
   else
     echo "  copying '$inputfile' to '$outputfile' ..."
+    echo -p ${outputfile%/*}/
     cp --parents $inputfile $outputfile
   fi      
 done
