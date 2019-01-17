@@ -8,7 +8,15 @@ echo "#### start.sh has started."
 
 cd ~
 cd ~/docker-elk
-docker-compose down
+
+#docker-compose down
+
+docker-compose \
+  -f docker-compose.yml \
+  -f extensions/curator/curator-compose.yml \
+  -f extensions/logspout/logspout-compose.yml \
+  down
+
 
 # Checkout docker-elk
 
