@@ -5,7 +5,8 @@ services:
   cerebro:
     image: yannart/cerebro
     ports:
-      - 9000:9000
+      # Because 9000 is already used by portainer
+      - 9001:9000
     volumes:
       - ./extensions/cerebro/config/application.conf:/opt/cerebro/conf/application.conf:ro
     depends_on:
