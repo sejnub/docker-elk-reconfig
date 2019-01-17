@@ -45,7 +45,7 @@ do
   else
     echo "  copying '$inputfile' to '$outputfile' ..."
     mkdir -p ${outputfile%/*}
-    cp --parents $inputfile $outputfile
+    cp $inputfile $outputfile
   fi      
 done
 
