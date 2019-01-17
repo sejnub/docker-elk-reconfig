@@ -27,10 +27,10 @@ do
   # take action on each file. $inputfile stores current file name
   if [ -f "$outputfile" ]; then
     echo "  deleting the file '$outputfile' ..."
-    rm -$outputfile
+    rm $outputfile
   elif [ -d "$outputfile" ]; then
     echo "  deleting the folder '$outputfile' ..."
-    rm -rf -$outputfile
+    rm -rf $outputfile
   else
     echo " not deleting '$outputfile' because it's neither regular file nor folder."
   fi      
