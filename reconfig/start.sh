@@ -18,7 +18,7 @@ git clone https://github.com/sejnub/docker-elk.git
 
 cd ~
 cd ~/docker-elk-reconfig
-./apply.reconfig.sh
+./apply.sh
 
 # Start docker-elk
 
