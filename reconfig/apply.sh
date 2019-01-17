@@ -1,7 +1,7 @@
 #!/bin/bash
 
-FILES_TO_BE_PROCESSED=$(find .)
-OUTPUT_FOLDER=../docker-elk
+FILES_TO_BE_PROCESSED=$(find ../.)
+OUTPUT_FOLDER=../../docker-elk
 
 
 
@@ -16,7 +16,7 @@ echo
 
 for inputfile in $FILES_TO_BE_PROCESSED
 do
-  #echo "Potentially copying: '$inputfile' ..."
+  echo "Potentially copying: '$inputfile' ..."
 
 
 
@@ -29,7 +29,7 @@ do
     : #echo "  $inputfile belongs to git. So it was not processed."
   else
     echo "  '$inputfile' is copied to '$OUTPUT_FOLDER' ..."
-    cp $inputfile $OUTPUT_FOLDER/$inputfile
+    #cp $inputfile $OUTPUT_FOLDER/$inputfile
   fi      
 done
 
