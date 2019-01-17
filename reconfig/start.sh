@@ -25,6 +25,13 @@ cd ~/docker-elk-reconfig/reconfig
 # Start docker-elk
 
 cd ~/docker-elk
-docker-compose up -d
+
+#docker-compose up -d
+
+docker-compose \
+  -f docker-compose.yml \
+  -f extensions/curator/curator-compose.yml \
+  -f extensions/logspout/logspout-compose.yml \
+  up -d
 
 echo "#### start.sh has ended."
