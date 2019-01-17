@@ -17,7 +17,8 @@ cd ~
 rm -rf ~/docker-elk
 git clone https://github.com/sejnub/docker-elk.git
 cd ~/docker-elk
-git checkout x-pack
+#git checkout x-pack
+git checkout master
 
 # Apply docker-elk-reconfig
 

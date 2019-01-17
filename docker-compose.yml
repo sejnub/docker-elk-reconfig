@@ -13,8 +13,7 @@ services:
       - "9200:9200"
       - "9300:9300"
     environment:
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-      ELASTIC_PASSWORD: changeme
+      - "ES_JAVA_OPTS=-Xmx256m -Xms256m"
     networks:
       - elk
 
@@ -28,6 +27,8 @@ services:
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
     ports:
       - "5000:5000"
+      # 5000/udp is needed for logspout
+      - "5000:5000/udp"
       - "9600:9600"
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
@@ -42,9 +43,11 @@ services:
       args:
         ELK_VERSION: $ELK_VERSION
     volumes:
-      - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+      - ./kibana/config/:/usr/share/kibana/config:ro
     ports:
       - "5601:5601"
+    #environment:
+    #  - xpack.security.enabled=false
     networks:
       - elk
     depends_on:

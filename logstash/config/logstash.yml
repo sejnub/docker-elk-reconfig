@@ -1,15 +1,10 @@
 ---
-## Default Logstash configuration from logstash-docker.
-## from https://github.com/elastic/logstash-docker/blob/master/build/logstash/config/logstash-full.yml
+## Default Kibana configuration from kibana-docker.
+## from https://github.com/elastic/kibana-docker/blob/master/build/kibana/config/kibana.yml
 #
-http.host: "0.0.0.0"
-#xpack.monitoring.elasticsearch.url: http://elasticsearch:9200
-
-## X-Pack security credentials
-#
-xpack.monitoring.elasticsearch.username: logstash_system
-xpack.monitoring.elasticsearch.password: changeme  # unset by default. see:
-                                                   # https://www.elastic.co/guide/en/logstash/current/ls-security.html#ls-monitoring-user
+server.name: kibana
+server.host: "0"
+elasticsearch.url: http://elasticsearch:9200
 
 ##########################################
 ## End of original file from docker-elk ##
