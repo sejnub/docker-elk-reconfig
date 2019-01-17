@@ -19,6 +19,7 @@ clear
 cd ~
 rm -rf ~/docker-elk-reconfig
 git clone https://github.com/sejnub/docker-elk-reconfig.git
+git checkout develop
 
 # Do everything
 
