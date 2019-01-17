@@ -1,5 +1,8 @@
 #!/bin/bash
 
+BRANCH=master
+
+
 # This script starts the elk stack with the config this repository.
 
 # Stop everything
@@ -17,8 +20,7 @@ cd ~
 rm -rf ~/docker-elk
 git clone https://github.com/sejnub/docker-elk.git
 cd ~/docker-elk
-#git checkout x-pack
-git checkout master
+git checkout $BRANCH
 
 # Apply docker-elk-reconfig
 
