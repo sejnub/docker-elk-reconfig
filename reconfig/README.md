@@ -12,6 +12,8 @@ This repository contains
 
 ```sh
 
+BRANCH=develop
+
 clear
 
 # Checkout docker-elk-reconfig and cache git login
@@ -19,7 +21,7 @@ clear
 cd ~
 rm -rf ~/docker-elk-reconfig
 git clone https://github.com/sejnub/docker-elk-reconfig.git
-git checkout develop
+git checkout $BRANCH
 
 # Do everything
 
