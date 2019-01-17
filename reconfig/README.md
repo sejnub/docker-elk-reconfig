@@ -22,7 +22,7 @@ git clone https://github.com/sejnub/docker-elk-reconfig.git
 # Do everything
 
 cd ~
-cd ~/docker-elk-reconfig
+cd ~/docker-elk-reconfig/reconfig
 ./start.sh
 
 
