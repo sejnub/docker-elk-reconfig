@@ -1,12 +1,11 @@
 #!/bin/bash
 
+FILES_AND_FOLDERS_TO_BE_DELETED="docker-stack.yml .travis.yml LICENSE extensions/apm-server"
+
 echo "#### apply.sh has started."
 
 FILES_TO_BE_COPIED=$(find ../.)
 OUTPUT_FOLDER=../../docker-elk
-
-FILES_TO_BE_DELETED="docker-stack.yml"
-
 
 
 if ! [ -f $OUTPUT_FOLDER/README.md ]; then
@@ -19,18 +18,21 @@ fi
 
 
 
-for inputfile in $FILES_TO_BE_DELETED
+for inputfile in $FILES_AND_FOLDERS_TO_BE_DELETED
 do
   
   outputfile=$OUTPUT_FOLDER/$inputfile
   echo "Potentially deleting: '$outputfile' ..."
 
   # take action on each file. $inputfile stores current file name
-  if ! [ -f "$outputfile" ]; then
-    echo "  $outputfile was no regular file. So it was not processed."
+  if [ -f "$outputfile" ]; then
+    echo "  deleting the file '$outputfile' ..."
+    rm -$outputfile
+  elif [ -d "$outputfile" ]; then
+    echo "  deleting the folder '$outputfile' ..."
+    rm -rf -$outputfile
   else
-    echo "  deleting '$outputfile' ..."
-    rm $outputfile
+    echo " not deleting '$outputfile' because it's neither regular file nor folder."
   fi      
 done
 
