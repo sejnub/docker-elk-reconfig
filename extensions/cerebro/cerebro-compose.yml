@@ -11,3 +11,5 @@ services:
       - ./extensions/cerebro/config/application.conf:/opt/cerebro/conf/application.conf:ro
     depends_on:
       - elasticsearch
+    networks:
+      - elk
