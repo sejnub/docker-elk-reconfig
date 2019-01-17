@@ -21,12 +21,12 @@ clear
 cd ~
 rm -rf ~/docker-elk-reconfig
 git clone https://github.com/sejnub/docker-elk-reconfig.git
-git checkout $BRANCH
 
 # Do everything
 
 cd ~
 cd ~/docker-elk-reconfig/reconfig
+git checkout $BRANCH
 ./start.sh
 
 
