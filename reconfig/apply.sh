@@ -44,7 +44,7 @@ do
     : #echo "  $inputfile belongs to git. So it was not processed."
   else
     echo "  copying '$inputfile' to '$outputfile' ..."
-    cp $inputfile $outputfile
+    cp -p $inputfile $outputfile
   fi      
 done
 
