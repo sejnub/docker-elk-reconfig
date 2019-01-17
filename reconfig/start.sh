@@ -8,14 +8,7 @@ echo "#### start.sh has started."
 
 cd ~
 cd ~/docker-elk
-
-#docker-compose down
-
-docker-compose \
-  -f docker-compose.yml \
-  -f extensions/curator/curator-compose.yml \
-  -f extensions/logspout/logspout-compose.yml \
-  down
+docker-compose down --remove-orphans
 
 
 # Checkout docker-elk
@@ -33,8 +26,6 @@ cd ~/docker-elk-reconfig/reconfig
 # Start docker-elk
 
 cd ~/docker-elk
-
-#docker-compose up -d
 
 docker-compose \
   -f docker-compose.yml \
