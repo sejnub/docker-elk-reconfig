@@ -12,3 +12,9 @@ path.config: /usr/share/logstash/pipeline
 # With the next line reloading works. It is not necessary to add something like "environment: LS_OPTS: -r" to the compose file.
 config.reload.automatic: true
 config.reload.interval:  1s
+
+## x-pack
+#
+# Monitoring
+xpack.monitoring.enabled: true
+xpack.monitoring.elasticsearch.url: "elasticsearch:9200"

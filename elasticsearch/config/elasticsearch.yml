@@ -19,4 +19,9 @@ discovery.type: single-node
 ## see https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-xpack.html
 #
 #xpack.license.self_generated.type: trial
+#
+# Security
 xpack.security.enabled: false
+# Monitoring
+xpack.monitoring.collection.enabled: true
+# 

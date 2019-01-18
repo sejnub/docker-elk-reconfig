@@ -10,6 +10,7 @@ BRANCH=x-pack
 
 echo "#### start.sh has started."
 
+
 cd ~
 cd ~/docker-elk
 docker-compose down --remove-orphans
