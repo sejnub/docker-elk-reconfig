@@ -24,14 +24,17 @@ This repository contains
 
 ### Enable APM
 
-- Search for apm in all files of this rep and change those places cleverly
-- add apm to docker-compose up in start.sh
+- Search for apm in all files of this rep and change those places cleverly :)
+- add apm to ```docker-compose up``` in start.sh
 
 ## Run it
 
 ```sh
 
-curl https://raw.githubusercontent.com/sejnub/docker-elk-reconfig/develop/reconfig/first_start.sh | bash; cd ~; cd ~/docker-elk-reconfig/reconfig; ls -asl
+curl https://raw.githubusercontent.com/sejnub/docker-elk-reconfig/develop/reconfig/first_start.sh | bash
+cd ~
+cd ~/docker-elk-reconfig/reconfig
+ls -asl
 
 ```
 
