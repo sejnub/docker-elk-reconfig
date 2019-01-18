@@ -12,4 +12,5 @@ elasticsearch.url: http://elasticsearch:9200
 #xpack.apm.enabled:     false
 xpack.apm.ui.enabled : false
 #
-# xxx
+# Machine learning
+xpack.ml.enabled

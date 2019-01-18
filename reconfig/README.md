@@ -46,7 +46,7 @@ git checkout $BRANCH
 
 ```
 
-## Save Kibana optimizations
+## WIP: Save Kibana optimizations
 
 After running the 
 ```bash
