@@ -39,7 +39,7 @@ docker-compose \
   -f extensions/curator/curator-compose.yml \
   -f extensions/cerebro/cerebro-compose.yml \
   -f extensions/logspout/logspout-compose.yml \
-  up -d
+  up -d --build
 
 docker-compose \
   -f extensions/portainer/portainer-compose.yml \
