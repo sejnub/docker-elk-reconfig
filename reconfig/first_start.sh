@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#TODO: Take branch as parameter here!
 DOCKER_ELK_RECONFIG_BRANCH=develop
 
 
