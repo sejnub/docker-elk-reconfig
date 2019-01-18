@@ -9,10 +9,10 @@ echo "#### stop-clone-apply-start.sh has started."
 cd ~; cd ~/docker-elk-reconfig/reconfig
 
 # Stop everything
-./stop
+./stop.sh
 
 # Checkout docker-elk
-./clone $DOCKER_ELK_BRANCH
+./clone.sh $DOCKER_ELK_BRANCH
 
 # Apply docker-elk-reconfig
 ./apply.sh
