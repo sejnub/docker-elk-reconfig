@@ -34,7 +34,8 @@ This repository contains
 
 ```sh
 
-curl https://raw.githubusercontent.com/sejnub/docker-elk-reconfig/develop/reconfig/first_start.sh | bash
+curl https://raw.githubusercontent.com/sejnub/docker-elk-reconfig/develop/reconfig/first_start.sh | bash; cd ~; cd ~/docker-elk-reconfig/reconfig; ls -asl
+
 
 ```
 
