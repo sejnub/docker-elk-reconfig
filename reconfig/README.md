@@ -20,38 +20,18 @@ This repository contains
 - <https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-xpack.html>
 - <https://www.elastic.co/guide/en/elasticsearch/reference/current/settings-xpack.html>
 
-
 ## Enable more extensions
 
 ### Enable APM
 
 - Search for apm in all files of this rep and change those places cleverly
 - add apm to docker-compose up in start.sh
-- Check if 
 
 ## Run it
-
 
 ```sh
 
 curl https://raw.githubusercontent.com/sejnub/docker-elk-reconfig/develop/reconfig/first_start.sh | bash; cd ~; cd ~/docker-elk-reconfig/reconfig; ls -asl
-
-
-```
-
-## WIP: Save Kibana optimizations
-
-After running the 
-```bash
-
-docker commit docker-elk_kibana_1 kibana_optimized
-
-cd ~/docker-elk-reconfig
-./stop.sh
-
-docker rm docker-elk_kibana_1
-docker rmi docker-elk_kibana:latest
-docker tag kibana_optimized docker-elk_kibana:latest
 
 ```
 
