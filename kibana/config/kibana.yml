@@ -9,7 +9,7 @@ elasticsearch.url: http://elasticsearch:9200
 ## x-pack
 #
 # apm
-xpack.apm.enabled:     false
+#xpack.apm.enabled:     false
 xpack.apm.ui.enabled : false
 #
 # xxx
