@@ -13,12 +13,21 @@ This repository contains
 - kibana optimize task
   - [add command line option to execute the optimize task standalone](https://github.com/elastic/kibana/issues/6057)
   - [How to do custom docker image that has certain features disabled](https://discuss.elastic.co/t/how-to-do-custom-docker-image-that-has-certain-features-disabled/132007/4)
-  
+
 ### x-pack
 
 - <https://www.elastic.co/subscriptions>
 - <https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-xpack.html>
 - <https://www.elastic.co/guide/en/elasticsearch/reference/current/settings-xpack.html>
+
+
+## Enable more extensions
+
+### Enable APM
+
+- Search for apm in all files of this rep and change those places cleverly
+- add apm to docker-compose up in start.sh
+- Check if 
 
 ## Run it
 
