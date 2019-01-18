@@ -13,4 +13,6 @@ elasticsearch.url: http://elasticsearch:9200
 xpack.apm.ui.enabled : false
 #
 # Machine learning
+
+# Enabling the following line causes kibana to optimze the cache at startup which takes seveall minutes
 xpack.ml.enabled: false

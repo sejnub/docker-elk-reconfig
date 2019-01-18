@@ -13,6 +13,7 @@ This repository contains
 - kibana optimize task
   - [add command line option to execute the optimize task standalone](https://github.com/elastic/kibana/issues/6057)
   - [How to do custom docker image that has certain features disabled](https://discuss.elastic.co/t/how-to-do-custom-docker-image-that-has-certain-features-disabled/132007/4)
+  
 ### x-pack
 
 - <https://www.elastic.co/subscriptions>
