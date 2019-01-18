@@ -1,6 +1,7 @@
 #!/bin/bash
 
-BRANCH=master
+#BRANCH=master
+BRANCH=x-pack
 
 
 # This script starts the elk stack with the config this repository.
