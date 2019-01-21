@@ -18,6 +18,10 @@ else
   echo "Success" 
 fi
 
+
+# TODO: This does not work. Maybe delete the named volume with esdata at first start (and only at first start).
+
+
 echo "Delete all indicies that were created before the global template was uploaded"
 #curl --noproxy localhost -XDELETE 'http://localhost:9200/_all' &> /dev/null
 
