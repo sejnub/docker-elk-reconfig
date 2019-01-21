@@ -8,14 +8,14 @@ echo "#### stop-clone-apply-start-wait-init.sh has started."
 
 cd ~; cd ~/docker-elk-reconfig/reconfig
 
-# Stop everything
-./stop.sh
-
 # Checkout docker-elk
 ./clone.sh $DOCKER_ELK_BRANCH
 
 # Apply docker-elk-reconfig
 ./apply.sh
+
+# Stop everything
+./stop.sh
 
 # Start docker-elk
 ./start.sh
