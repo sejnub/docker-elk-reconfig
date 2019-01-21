@@ -19,7 +19,7 @@ else
 fi
 
 echo "Delete all indicies that were created before the global template was uploaded"
-curl --noproxy localhost -XDELETE 'http://localhost:9200/_all' &> /dev/null
+#curl --noproxy localhost -XDELETE 'http://localhost:9200/_all' &> /dev/null
 
 if  [ $? -ne 0 ]; then
   echo "ERROR: curl failed."
