@@ -15,5 +15,5 @@ git clone https://github.com/sejnub/docker-elk-reconfig.git
 # Do everything
 cd ~/docker-elk-reconfig/reconfig
 git checkout $DOCKER_ELK_RECONFIG_BRANCH
-./stop-clone-apply-start.sh
+stop-clone-apply-start-wait-init.sh
 
