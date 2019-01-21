@@ -11,7 +11,8 @@ curl --noproxy localhost -XPUT 'http://localhost:9200/_template/global' -H 'Cont
  }
 }' &> /dev/null
 
-if  [ $returncode -ne 0 ]; then
+
+if  [ $? -ne 0 ]; then
   echo "ERROR: curl failed." 
 else
   echo "Success" 
@@ -20,7 +21,7 @@ fi
 echo "Delete all indicies that were created before the global template was uploaded"
 curl --noproxy localhost -XDELETE 'http://localhost:9200/_all' &> /dev/null
 
-if  [ $returncode -ne 0 ]; then
+if  [ $? -ne 0 ]; then
   echo "ERROR: curl failed."
 else
   echo "Success" 
