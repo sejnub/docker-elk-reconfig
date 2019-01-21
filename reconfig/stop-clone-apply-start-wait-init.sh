@@ -21,7 +21,7 @@ cd ~; cd ~/docker-elk-reconfig/reconfig
 ./start.sh
 
 # Wait
-/utils/wait-for/wait-for-elasticsearch.sh
+./utils/wait-for/wait-for-elasticsearch.sh
 
 # Init Elasticsearch
 ./init.sh
