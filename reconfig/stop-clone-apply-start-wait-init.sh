@@ -20,4 +20,10 @@ cd ~; cd ~/docker-elk-reconfig/reconfig
 # Start docker-elk
 ./start.sh
 
+# Wait
+/utils/wait-for/wait-for-elasticsearch.sh
+
+# Init Elasticsearch
+./init.sh
+
 echo "#### stop-clone-apply-start.sh has ended."
