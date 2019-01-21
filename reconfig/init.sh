@@ -9,10 +9,22 @@ curl --noproxy localhost -XPUT 'http://localhost:9200/_template/global' -H 'Cont
  "settings": {
    "number_of_replicas": 0
  }
-}'
+}' &> /dev/null
+
+if  [ "$returncode" -ne 0 ]; then
+  echo "ERROR: curl failed." 
+else
+  echo "Success" 
+fi
 
 echo "Delete all indicies that were created before the global template was uploaded"
-curl --noproxy localhost -XDELETE 'http://localhost:9200/_all'
+curl --noproxy localhost -XDELETE 'http://localhost:9200/_all' &> /dev/null
+
+if  [ "$returncode" -ne 0 ]; then
+  echo "ERROR: curl failed."
+else
+  echo "Success" 
+fi
 
 #echo "Initialize beats that are not already part of this stack"
 #./setup/initializeBeats.sh
