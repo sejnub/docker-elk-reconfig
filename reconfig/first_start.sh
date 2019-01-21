@@ -18,4 +18,3 @@ git checkout $DOCKER_ELK_RECONFIG_BRANCH
 cd ~
 cd ~/docker-elk-reconfig/reconfig
 ./stop-clone-apply-start-wait-init.sh
-
