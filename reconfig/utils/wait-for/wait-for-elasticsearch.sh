@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "#### wait-for-elasticsearch.sh has started."
+
 returncode=-1
 while [ "$returncode" -ne 0 ]
 do
@@ -7,3 +9,5 @@ do
   returncode=$?
   sleep 1
 done
+
+echo "#### wait-for-elasticsearch.sh has ended."
