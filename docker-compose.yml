@@ -56,3 +56,6 @@ networks:
 
   elk:
     driver: bridge
+
+volumes:
+  esdata1:
