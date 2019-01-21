@@ -4,7 +4,7 @@
 
 DOCKER_ELK_BRANCH=x-pack
 
-echo "#### stop-clone-apply-start.sh has started."
+echo "#### stop-clone-apply-start-wait-init.sh has started."
 
 cd ~; cd ~/docker-elk-reconfig/reconfig
 
@@ -26,4 +26,4 @@ cd ~; cd ~/docker-elk-reconfig/reconfig
 # Init Elasticsearch
 ./init.sh
 
-echo "#### stop-clone-apply-start.sh has ended."
+echo "#### stop-clone-apply-start-wait-init.sh has ended."
