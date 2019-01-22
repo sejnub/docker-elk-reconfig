@@ -19,7 +19,7 @@ else
 fi
 
 
-# TODO: This does not work. Maybe delete the named volume with esdata at first start (and only at first start).
+# TODO: This does not work. Maybe delete the named volume with esdata at first start (and only at first start). Hmm no the solution is not that simple.
 
 
 echo "Delete all indicies that were created before the global template was uploaded"
