@@ -12,7 +12,7 @@ else
   echo "first_start was called without a branch parameter."
   if [ -z "$DOCKER_ELK_RECONFIG_BRANCH" ]; then
     DOCKER_ELK_RECONFIG_BRANCH=$DEFAULT_BRANCH
-    echo "I am setting the default branch of docker-elk-reconfig to '$DOCKER_ELK_RECONFIG_BRANCH'."
+    echo "I am setting the branch of docker-elk-reconfig to '$DOCKER_ELK_RECONFIG_BRANCH'."
   else
     echo "You set the default branch of docker-elk-reconfig to '$DOCKER_ELK_RECONFIG_BRANCH'. So I use that."
   fi
