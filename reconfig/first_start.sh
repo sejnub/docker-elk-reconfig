@@ -1,16 +1,25 @@
 #!/bin/bash
 
-#TODO: Take branch as parameter here!
-DOCKER_ELK_RECONFIG_BRANCH=develop
+
+DEFAULT_BRANCH=develop
 
 echo "#### first_start.sh has started."
 
-if [ $# -gt 0 ]; then
-  echo "first_start was called without a branch parameter. Taking taking the default: '$DOCKER_ELK_RECONFIG_BRANCH'"
+if [ -z "$DOCKER_ELK_RECONFIG_BRANCH" ]; then
+  DOCKER_ELK_RECONFIG_BRANCH=$DEFAULT_BRANCH
+  echo "I am setting the default branch of docker-elk-reconfig to '$DOCKER_ELK_RECONFIG_BRANCH'."
 else
-  DOCKER_ELK_RECONFIG_BRANCH=$1  
-  echo "Cloning the branch '$DOCKER_ELK_RECONFIG_BRANCH' of docker-elk-reconfig."
+  echo "You set the default branch of docker-elk-reconfig to '$DOCKER_ELK_RECONFIG_BRANCH'."
 fi
+
+if [ $# -gt 0 ]; then
+  echo "first_start was called without a branch parameter. Taking the default: '$DOCKER_ELK_RECONFIG_BRANCH'"
+else
+  DOCKER_ELK_RECONFIG_BRANCH=$1
+  echo "first_start was called with the branch parameter '$DOCKER_ELK_RECONFIG_BRANCH'. So I will use that."
+fi
+
+echo "Cloning the branch '$DOCKER_ELK_RECONFIG_BRANCH' of docker-elk-reconfig."
 
 # https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html
 sudo sysctl -w vm.max_map_count=262144
