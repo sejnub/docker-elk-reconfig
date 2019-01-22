@@ -29,11 +29,11 @@ services:
       - ./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
     ports:
-      # 500/tcp for logstash
+      # 5000/tcp for logstash
       - "5000:5000"
       # 5001/udp for logspout
       - "5001:5001/udp"
-      # 5001/udp for syslog
+      # 514/udp for syslog
       - "514:5514/udp"
       - "9600:9600"
     environment:
