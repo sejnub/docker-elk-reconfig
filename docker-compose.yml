@@ -17,6 +17,7 @@ services:
       ES_JAVA_OPTS: "-Xmx256m -Xms256m"
     networks:
       - elk
+    restart: always
 
   logstash:
     build:
@@ -28,15 +29,20 @@ services:
       - ./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
     ports:
-      # 500/tcp is needed for logstash
+      # 500/tcp for logstash
       - "5000:5000"
-      # 5001/udp is needed for logspout
+      # 5001/udp for logspout
       - "5001:5001/udp"
+      # 5001/udp for syslog
+      - "514:5514/udp"
       - "9600:9600"
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+      # The following does not work: LS_OPTS: "-r"
+      # Instead look at the file docker-elk\logstash\config\logstash.yml
     networks:
       - elk
+    restart: always
     depends_on:
       - elasticsearch
 
@@ -51,6 +57,7 @@ services:
       - "5601:5601"
     networks:
       - elk
+    restart: always
     depends_on:
       - elasticsearch
 
