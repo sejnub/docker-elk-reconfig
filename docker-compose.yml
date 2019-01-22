@@ -25,11 +25,13 @@ services:
         ELK_VERSION: $ELK_VERSION
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
     ports:
+      # 500/tcp is needed for logstash
       - "5000:5000"
-      # 5000/udp is needed for logspout
-      - "5000:5000/udp"
+      # 5001/udp is needed for logspout
+      - "5001:5001/udp"
       - "9600:9600"
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"

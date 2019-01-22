@@ -1,0 +1,4 @@
+- pipeline.id: logspout
+  path.config: "/usr/share/logstash/pipeline/logspout.conf"
+- pipeline.id: logstash
+  path.config: "/usr/share/logstash/pipeline/logstash.conf"
