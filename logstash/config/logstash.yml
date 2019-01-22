@@ -4,7 +4,7 @@
 #
 http.host: "0.0.0.0"
 
-# The following isn't needed because we have the pipelines.yml
+# The following isn't allowed otherwise the pipelines.yml is not used.
 #path.config: /usr/share/logstash/pipeline
 
 ##########################################

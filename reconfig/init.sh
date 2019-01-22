@@ -4,11 +4,12 @@ echo "#### init.sh has started."
 
 echo "Set number_of_replicas for all indices to 0"
 curl --noproxy localhost -XPUT 'http://localhost:9200/_template/docker-elk-no-replicas' -H 'Content-Type: application/json' -d '{
- "index_patterns": ["*", ".*"],
- "order": 10,
- "settings": {
-   "number_of_replicas": 0
- }
+  "index_patterns": ["*", ".*"],
+  "order": 10,
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  }
 }' &> /dev/null
 
 
