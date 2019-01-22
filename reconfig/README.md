@@ -31,7 +31,7 @@ This repository contains
 
 ```sh
 
-DOCKER_ELK_RECONFIG_BRANCH=feature37
+export DOCKER_ELK_RECONFIG_BRANCH=feature37
 
 
 clear

@@ -14,7 +14,8 @@ else
     DOCKER_ELK_RECONFIG_BRANCH=$DEFAULT_BRANCH
     echo "I am setting the branch of docker-elk-reconfig to '$DOCKER_ELK_RECONFIG_BRANCH'."
   else
-    echo "You set the default branch of docker-elk-reconfig to '$DOCKER_ELK_RECONFIG_BRANCH'. So I use that."
+    echo "You set the default branch of docker-elk-reconfig to '$DOCKER_ELK_RECONFIG_BRANCH';"
+    echo "so I use that because first_start was called without an overwriting paramter."
   fi
 fi
 
