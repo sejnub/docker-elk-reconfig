@@ -7,7 +7,7 @@ echo "#### clone.sh has started."
 
 if [ $# -gt 0 ]; then
   DOCKER_ELK_BRANCH=$1  
-  echo "Cloning the branch '$DOCKER_ELK_BRANCH' of docker-elk."
+  echo "Clone was called with the parameter '$DOCKER_ELK_BRANCH'. Using that as the branch of docker-elk."
 else
   echo "Clone was called without a branch parameter. Taking taking the default: '$DOCKER_ELK_BRANCH'"
 fi
