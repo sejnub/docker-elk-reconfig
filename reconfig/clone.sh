@@ -6,10 +6,10 @@ DOCKER_ELK_BRANCH=x-pack
 echo "#### clone.sh has started."
 
 if [ $# -gt 0 ]; then
-  echo "Clone was called without a branch parameter. Taking taking the default: '$DOCKER_ELK_BRANCH'"
-else
   DOCKER_ELK_BRANCH=$1  
   echo "Cloning the branch '$DOCKER_ELK_BRANCH' of docker-elk."
+else
+  echo "Clone was called without a branch parameter. Taking taking the default: '$DOCKER_ELK_BRANCH'"
 fi
 
 # Checkout docker-elk

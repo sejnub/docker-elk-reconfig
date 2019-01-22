@@ -5,19 +5,19 @@ DEFAULT_BRANCH=develop
 
 echo "#### first_start.sh has started."
 
-if [ -z "$DOCKER_ELK_RECONFIG_BRANCH" ]; then
-  DOCKER_ELK_RECONFIG_BRANCH=$DEFAULT_BRANCH
-  echo "I am setting the default branch of docker-elk-reconfig to '$DOCKER_ELK_RECONFIG_BRANCH'."
-else
-  echo "You set the default branch of docker-elk-reconfig to '$DOCKER_ELK_RECONFIG_BRANCH'."
-fi
-
 if [ $# -gt 0 ]; then
-  echo "first_start was called without a branch parameter. Taking the default: '$DOCKER_ELK_RECONFIG_BRANCH'"
-else
   DOCKER_ELK_RECONFIG_BRANCH=$1
   echo "first_start was called with the branch parameter '$DOCKER_ELK_RECONFIG_BRANCH'. So I will use that."
+else
+  echo "first_start was called without a branch parameter."
+  if [ -z "$DOCKER_ELK_RECONFIG_BRANCH" ]; then
+    DOCKER_ELK_RECONFIG_BRANCH=$DEFAULT_BRANCH
+    echo "I am setting the default branch of docker-elk-reconfig to '$DOCKER_ELK_RECONFIG_BRANCH'."
+  else
+    echo "You set the default branch of docker-elk-reconfig to '$DOCKER_ELK_RECONFIG_BRANCH'. So I use that."
+  fi
 fi
+
 
 echo "Cloning the branch '$DOCKER_ELK_RECONFIG_BRANCH' of docker-elk-reconfig."
 
