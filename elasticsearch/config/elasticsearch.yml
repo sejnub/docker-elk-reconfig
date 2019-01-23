@@ -25,3 +25,5 @@ xpack.security.enabled: false
 # Monitoring
 xpack.monitoring.collection.enabled: true
 # 
+# See https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html
+path.repo: ["/tempdrive"]
