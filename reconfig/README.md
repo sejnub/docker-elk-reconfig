@@ -31,16 +31,13 @@ This repository contains
 
 ```sh
 
-export DOCKER_ELK_RECONFIG_BRANCH=feature37
-
-
 clear
 ################################################################################"
 ################################################################################"
 ################################################################################"
 ################################################################################"
 
-curl https://raw.githubusercontent.com/sejnub/docker-elk-reconfig/develop/reconfig/first_start.sh | bash
+curl https://raw.githubusercontent.com/sejnub/docker-elk-reconfig/feature37/reconfig/first_start.sh | bash
 cd ~
 cd ~/docker-elk-reconfig/reconfig
 ls -asl
