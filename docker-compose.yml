@@ -36,6 +36,8 @@ services:
       - "5001:5001/udp"
       # 514/udp for syslog
       - "514:5514/udp"
+      # 515 for syslog that originally came in via UDP
+      - "515:5515"
       - "9600:9600"
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
