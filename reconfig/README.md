@@ -42,7 +42,7 @@ clear
 
 export DOCKER_ELK_RECONFIG_BRANCH=feature37
 
-curl https://raw.githubusercontent.com/sejnub/docker-elk-reconfig/develop/reconfig/first_start.sh | bash
+curl https://raw.githubusercontent.com/sejnub/docker-elk-reconfig/hunte37/reconfig/first_start.sh | bash
 cd ~
 cd ~/docker-elk-reconfig/reconfig
 ls -asl
