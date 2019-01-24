@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+  cerebro:
+    image: elastichq/elasticsearch-hq
+    ports:
+      # Because 5000 is already used by logstash
+      - 5001:5000
+    # volumes:
+    #   - ./extensions/elastichq/config/xxxx.yyy:XXXXXXXXXXXX:ro
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch

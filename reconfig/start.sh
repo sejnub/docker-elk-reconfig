@@ -9,6 +9,7 @@ docker-compose \
   -f docker-compose.yml \
   -f extensions/curator/curator-compose.yml \
   -f extensions/cerebro/cerebro-compose.yml \
+  -f extensions/elastichq/elastichq-compose.yml \
   -f extensions/logspout/logspout-compose.yml \
   up -d
 
