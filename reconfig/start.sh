@@ -4,6 +4,10 @@ echo "#### start.sh has started."
 
 cd ~/docker-elk
 
+# For logspout
+export HOSTNAME=$(hostname)
+echo "HOSTNAME='$HOSTNAME'"
+
 # add --build to check for new Dockerfiles
 docker-compose \
   -f docker-compose.yml \
@@ -13,10 +17,6 @@ docker-compose \
   -f extensions/logspout/logspout-compose.yml \
   up -d
 
-
-
-export HOSTNAME=$(hostname)
-echo "HOSTNAME='$HOSTNAME'"
 
 docker-compose \
   -f extensions/portainer/portainer-compose.yml \
