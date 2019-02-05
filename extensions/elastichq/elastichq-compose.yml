@@ -5,8 +5,8 @@ services:
   cerebro:
     image: elastichq/elasticsearch-hq
     ports:
-      # Because 5000 is already used by logstash
-      - 5001:5000
+      # Because 5000 and 5001 are already used by logstash
+      - 5100:5000
     # volumes:
     #   - ./extensions/elastichq/config/xxxx.yyy:XXXXXXXXXXXX:ro
     networks:
