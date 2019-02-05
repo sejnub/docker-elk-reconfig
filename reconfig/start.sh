@@ -13,6 +13,11 @@ docker-compose \
   -f extensions/logspout/logspout-compose.yml \
   up -d
 
+
+
+export HOSTNAME=$(hostname)
+echo "HOSTNAME='$HOSTNAME'"
+
 docker-compose \
   -f extensions/portainer/portainer-compose.yml \
   up -d
