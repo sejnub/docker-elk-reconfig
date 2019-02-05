@@ -31,14 +31,17 @@ services:
       - ./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
     ports:
-      # 5000/tcp for logstash
-      - "5000:5000"
-      # 5001/udp for logspout
-      - "5001:5001/udp"
       # 514/udp for syslog
       - "514:5514/udp"
       # 515 for syslog that originally came in via UDP
       - "515:5515"
+      # 5000/tcp standard port for logstash
+      - "5000:5000"
+      # 5001/udp for logspout on same host
+      - "5001:5001/udp"
+      # 5001/tcp for logspout on other hosts
+      - "5001:5001"
+      # 9600 is the logstash API
       - "9600:9600"
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
