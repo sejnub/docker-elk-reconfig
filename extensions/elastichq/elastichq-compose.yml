@@ -2,7 +2,7 @@ version: '2'
 
 services:
 
-  cerebro:
+  elastichq:
     image: elastichq/elasticsearch-hq
     ports:
       # Because 5000 and 5001 are already used by logstash
