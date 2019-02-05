@@ -9,7 +9,7 @@ services:
     environment:
       ROUTE_URIS: logstash://logstash:5001
       #LOGSTASH_TAGS: docker-elk
-      LOGSTASH_FIELDS: "sejnub.source=logspout,sejnub.host=elk"
+      LOGSTASH_FIELDS: "sejnub.source=logspout,sejnub.host=${HOSTNAME},host=${HOSTNAME}"
     networks:
       - elk
     depends_on:
