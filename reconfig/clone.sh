@@ -15,7 +15,7 @@ fi
 # Checkout docker-elk
 cd ~
 rm -rf ~/docker-elk
-git clone https://github.com/sejnub/docker-elk.git
+git clone https://github.com/deviantony/docker-elk.git
 cd ~/docker-elk
 git checkout $DOCKER_ELK_BRANCH
 
