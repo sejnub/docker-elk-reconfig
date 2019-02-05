@@ -14,7 +14,7 @@ docker-compose down
 
 cd ~
 rm -rf ~/docker-elk
-git clone https://github.com/sejnub/docker-elk.git
+git clone https://github.com/deviantony/docker-elk.git
 
 # Apply docker-elk-reconfig
 
