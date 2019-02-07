@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+
+  elastichq:
+    image: elastichq/elasticsearch-hq
+    ports:
+      # Because 5000 and 5001 are already used by logstash
+      - 5100:5000
+
+    environment:
+      HQ_DEFAULT_URL: http://elasticsearch:9200
+    # volumes:
+    #   - ./extensions/elastichq/config/xxxx.yyy:XXXXXXXXXXXX:ro
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
