@@ -1,5 +1,15 @@
 # Elastic stack configuration (ELK) on Docker
 
+## For hunte37 specific commands (curl, etc) see setup/elastic-stack
+
+There you find commands for Kibana or curl that do:
+
+- snapshot
+- restore
+- search
+- delete
+- ...
+
 ## What is this
 
 This repository contains
